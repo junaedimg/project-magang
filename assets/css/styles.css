@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/* Global css */
+*,
+html {
+  color: black;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  /* border: 1px solid black; */
+}
+
+/* container untuk semua element di dalam body */
+#container-body {
+  height: 100vh;
+  /* background-color: purple; */
+  display: grid;
+  grid-template:
+    "header header" max-content
+    "nav  main" 1fr
+    / max-content 1fr;
+}
+
+/* Header */
+header {
+  height: 100%;
+  grid-area: header;
+}
+
+/* Container untuk semua element di dalam header */
+header #container-header {
+  display: flex;
+  padding: 10px 40px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #243d5e;
+  /* border-bottom: black solid 2px; */
+}
+
+/* untuk membungkus logo dan keterangan web */
+#container-header #intro {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+/* untuk membungkus gambar logo */
+#container-header #logo {
+  width: 60px;
+  height: 60px;
+  background-color: #999;
+}
+
+/* untuk membungkus keterangan web */
+#container-header #sira {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+/*  keterangan header */
+#container-header #intro #sira h1,
+h4 {
+  color: white;
+}
+
+/* untuk membungkus nama user */
+#container-header span {
+  color: white;
+  text-decoration: underline;
+  /* background-color: purple; */
+}
+
+/* navigasi */
+
+nav {
+  padding-right: 17px;
+  grid-area: nav;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: #0d1a2d;
+}
+
+/* text menu di nav */
+nav .container-nav h3.menu {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+}
+/* list lvl 1 */
+nav div ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav div ul ul {
+  height: 0px;
+  overflow: auto;
+}
+
+nav div ul ul.show-list {
+  height: max-content;
+}
+
+nav div ul li {
+  float: left;
+  display: block;
+  border-top: 1px solid rgba(94, 94, 94, 0.5);
+}
+nav div ul li:last-child {
+  border-bottom: 1px solid rgba(94, 94, 94, 0.5);
+}
+
+nav div ul a {
+  color: white;
+  border-left: 5px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 25px;
+  line-height: 39px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+nav div ul a.active {
+  background-image: linear-gradient(
+    to right,
+    rgb(12, 19, 28),
+    rgba(13, 26, 45, 0.5)
+  );
+  border-left: 5px solid cyan;
+  color: cyan;
+}
+
+nav div ul a span {
+  position: relative;
+  left: 5px;
+  line-height: 39px;
+  top: 20%;
+  font-size: 20px;
+  color: white;
+}
+
+nav div ul a span.rotate {
+  rotate: 180deg;
+}
+
+nav div ul a:hover {
+  background-color: #192536;
+}
+/* List lvl 2  */
+
+nav div ul li ul li {
+  border: none;
+}
+
+nav div ul ul a {
+  padding-left: 50px;
+}
+nav div ul ul ul a {
+  padding-left: 75px;
+}
+
+/* main */
+main {
+  grid-area: main;
+  background-color: #fff;
+}
