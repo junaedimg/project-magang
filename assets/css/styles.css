@@ -11,10 +11,14 @@ html {
   font-size: 16px;
   /* border: 1px solid black; */
 }
+body{
+  overflow: hidden;
+}
 
 /* container untuk semua element di dalam body */
 #container-body {
   height: 100vh;
+ 
   /* background-color: purple; */
   display: grid;
   grid-template:
@@ -67,6 +71,10 @@ h4 {
   color: white;
 }
 
+#container-header section div.menu-toggle {
+  display: none;
+}
+
 /* untuk membungkus nama user */
 #container-header span {
   color: white;
@@ -75,13 +83,23 @@ h4 {
 }
 
 /* navigasi */
-
 nav {
+  /* position: relative; */
+  /* position: absolute; */
   padding-right: 17px;
   grid-area: nav;
   overflow-y: scroll;
   height: 100%;
   background-color: #0d1a2d;
+}
+
+/* button nav untuk mobile */
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
 /* text menu di nav */
@@ -99,13 +117,17 @@ nav div ul {
   flex-direction: column;
 }
 
+/* hide nav */
 nav div ul ul {
-  height: 0px;
-  overflow: auto;
+  /* width: max-content; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
+/* show nav */
 nav div ul ul.show-list {
-  height: max-content;
+  max-height: 10000px;
 }
 
 nav div ul li {
@@ -171,5 +193,67 @@ nav div ul ul ul a {
 /* main */
 main {
   grid-area: main;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* max-width: 720px */
+/* Responsive For Mobile */
+@media only screen and (max-width: 420px) {
+  * {
+    /* border: 1px solid red; */
+  }
+
+  #container-body {
+    height: 100vh;
+    background-color: purple;
+    display: grid;
+    grid-template:
+      "header header" max-content
+      "nav  main" 1fr
+      / max-content 1fr;
+  }
+  
+  header #container-header {
+    display: block;
+  }
+
+  #container-header section {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #container-header section div.menu-toggle {
+    display: block;
+  }
+
+  /*Animating Hamburger Icon on Click*/
+  .active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .active .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+  }
+  .active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  div.wrapper-nav nav{
+    
+  }
+
+  nav {
+    /* top: 0; */
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 1s ease;
+  }
+
+  nav.show-nav{
+    transform: translateX(0%);
+  }
+
+
 }

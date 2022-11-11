@@ -23,37 +23,57 @@
                         <h4>Sistem Informasi Realisasi Anggaran BNNP Jabar</h4>
                     </div>
                 </div>
-                <span id="user">Admin, Jhonathan</span>
+                <section>
+                    <!-- awal button menu untuk mobile -->
+                    <div id="btn-menu" class="menu-toggle">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <!-- akhir button menu untuk mobile -->
+                    <span>Admin, Jhonathan</span>
+                </section>
             </div>
         </header>
-        <nav>
-            <div class="container-nav">
-                <h3 class="menu">Menu</h3>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">User & Pegawai</a></li>
-                    <li><a href="#">Departemen</a></li>
-                    <li><a href="#">Buat Rencana Realisasi</a></li>
-                    <li><a href="#" class="btn-list-nav">Laporan Realisasi Anggaran<span class="fas fa-caret-up"></span></a>
-                        <ul>
-                            <li><a href="#">Semua Realisasi</a></li>
-                            <li><a href="#" class="btn-list-nav">Realisasi Departemen<span class="fas fa-caret-up"></span></a>
-                                <ul>
-                                    <li><a href="#jab"> BNNK Jabar</a></li>
-                                    <li><a href="#gar">BNNK Garut</a></li>
-                                    <li><a href="#tas">BNNK Tasik</a></li>
-                                    <li><a href="#">BNNK x</a></li>
-                                    <li><a href="#">BNNK x</a></li>
-                                    <li><a href="#">BNNK x</a></li>
-                                    <li><a href="#">BNNK x</a></li>
-                                    <li><a href="#">BNNK x</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="wrapper-nav">
+            <nav>
+                <div class="container-nav">
+
+                    <h3 class="menu">Menu</h3>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">User & Pegawai</a></li>
+                        <li><a href="#">Departemen</a></li>
+                        <li><a href="#">Buat Rencana Realisasi</a></li>
+                        <li><a href="#" class="btn-list-nav">Laporan Realisasi Anggaran<span class="fas fa-caret-up"></span></a>
+                            <ul>
+                                <li><a href="#">Semua Realisasi</a></li>
+                                <li><a href="#" class="btn-list-nav">Realisasi Departemen<span class="fas fa-caret-up"></span></a>
+                                    <ul>
+                                        <li><a href="#jab">BNNK Jabar</a></li>
+                                        <li><a href="#gar">BNNK Garut</a></li>
+                                        <li><a href="#tas">BNNK Tasik</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                        <li><a href="#">BNNK x</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
         <main>
             <h2>main</h2>
         </main>

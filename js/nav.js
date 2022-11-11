@@ -17,3 +17,10 @@ btnListNav = document.querySelectorAll("nav div ul li a.btn-list-nav");
     this.nextElementSibling.classList.toggle("show-list");
   });
 });
+
+btnMenu = document.getElementById("btn-menu");
+btnMenu.addEventListener("click", function () {
+  console.log("test");
+  this.classList.toggle("active");
+  document.querySelector(".wrapper-nav nav").classList.toggle("show-nav");
+});
